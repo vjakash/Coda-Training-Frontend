@@ -43,14 +43,23 @@ class MainComponent extends HTMLElement {
   }
    getData(){
     console.log("inside getData")
-    fetch('https://pokeapi.co/api/v2/pokemon?limit=20&offset=20').then(data => data.json())
-    .then((json) => {
-      console.log(json);
-      allPokemon=json.results;
+    if(localStorage.getItem("result")!=null){
+      let result=JSON.parse(localStorage.getItem("result"));
+      allPokemon=result.results;
       searchProxy=new Proxy(allPokemon,searchHandler);
-      this.createChild(json);
-    })
-    .catch((error) => console.log(error));
+      this.createChild(result);
+    }else{
+      fetch('https://pokeapi.co/api/v2/pokemon?limit=20&offset=20').then(data => data.json())
+      .then((json) => {
+        console.log(json);
+        localStorage.setItem("result",JSON.stringify(json));
+        allPokemon=json.results;
+        searchProxy=new Proxy(allPokemon,searchHandler);
+        this.createChild(json);
+      })
+      .catch((error) => console.log(error));
+    }
+    
   }
   createChild(json){
     let container=this.shadowRoot.querySelector("#pokemonContainer");

@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+
+header {
+  display: flex;
+  justify-content: flex-start;
+  align-content: center;
+  padding: 20px;
+}
+header div {
+  box-sizing: border-box;
+  width: 50px;
+  height: 50px;
+  background-color: #317826;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 5px;
+}
+header div:nth-child(2) {
+  background-image: url('https://image.freepik.com/free-vector/businessman-character-avatar-isolated_24877-60111.jpg');
+  background-size: contain;
+}
+header div:nth-child(3) {
+  background: none;
+  margin-left: auto;
+}
+nav {
+  display: flex;
+  justify-content: flex-start;
+  align-content: center;
+  padding: 20px;
+}
+.active {
+  color: #fff;
+}
+nav span {
+  color: rgb(172, 172, 172);
+  font-size: 1.7em;
+  padding-right: 50px;
+  text-align: left;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 650px;
+  justify-content: space-between;
+  padding: 20px;
+}
+.leftContainer {
+  width: 71%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: flex-start;
+}
+.leftContainer div {
+  box-sizing: border-box;
+}
+.leftIconWrapper {
+  width: 16.6%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.leftIconWrapper .smallIcon {
+  width: 99.5%;
+  height: 33.3%;
+  background-image: url('https://image.freepik.com/free-vector/businessman-character-avatar-isolated_24877-60111.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.leftContainer .longIcon {
+  width: 99.5%;
+  height: 66.6%;
+}
+.top-icon-wrapper {
+  width: 66.6%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+.top-icon-wrapper .largeIcon {
+  width: 100%;
+  height: 66.6%;
+  background-image: url('https://image.freepik.com/free-vector/space-game-background-neon-night-alien-landscape_107791-1624.jpg');
+  background-size: cover;
+  position: relative;
+}
+.top-icon-wrapper .largeIcon p {
+  box-sizing: border-box;
+  position: absolute;
+  padding: 10px 30px;
+  bottom: 0;
+  left: 0;
+  font-size: 2em;
+  background-color: rgba(43, 43, 43, 0.603);
+}
+.top-icon-wrapper .smallIcon {
+  width: 24.75%;
+  height: 32.9%;
+}
+.bottom-icon-wrapper {
+  width: 16.6%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+.bottom-icon-wrapper .smallIcon {
+  width: 100%;
+  height: 33.1%;
+}
+.icon {
+  background-color: #317826;
+  margin: 1px;
+}
+.smallIcon {
+  position: relative;
+}
+.smallIcon span {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.smallIcon p {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding-left: 15px;
+  padding-bottom: 10px;
+  font-size: 1.2em;
+}
+.rightContainer {
+  width: 25%;
+}
+.rightContainer > p {
+  font-size: 1.5em;
+  padding-bottom: 3px;
+}
+.rightContainer .thumbnail {
+  width: 100%;
+  height: 30%;
+  position: relative;
+  margin-bottom: 7px;
+  background-size: contain;
+}
+.thumbnail:nth-child(2) {
+  background-image: url('https://image.freepik.com/free-vector/space-game-background-neon-night-alien-landscape_107791-1624.jpg');
+}
+.thumbnail:nth-child(3) {
+  background-image: url('https://image.freepik.com/free-vector/game-level-background-with-platforms-items_107791-4702.jpg');
+}
+.thumbnail:nth-child(4) {
+  background-image: url('https://image.freepik.com/free-vector/jungle-game-template-with-monkey_1308-10501.jpg');
+}
+.rightContainer .thumbnail > p {
+  box-sizing: border-box;
+  position: absolute;
+  width: 100%;
+  padding: 10px 10px;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(58, 58, 58, 0.603);
+}
+@media screen and (min-width: 350px) and (max-width: 600px) {
+  main {
+    height: auto;
+  }
+  .leftContainer {
+    width: 100%;
+    height: 1500px;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+  .leftIconWrapper {
+    width: 100%;
+    height: 40%;
+  }
+  .leftIconWrapper .smallIcon {
+    height: 43.3%;
+  }
+  .leftContainer .longIcon {
+    height: 56.6%;
+  }
+  .top-icon-wrapper {
+    width: 100%;
+    height: 40%;
+  }
+  .top-icon-wrapper .largeIcon {
+    width: 100%;
+    height: 30%;
+  }
+  .top-icon-wrapper .largeIcon p {
+    font-size: 1.4em;
+  }
+  .top-icon-wrapper .smallIcon {
+    width: 49%;
+    height: 33.3%;
+  }
+
+  .bottom-icon-wrapper {
+    margin-top: 2px;
+    width: 100%;
+    height: 30%;
+  }
+  .bottom-icon-wrapper .smallIcon {
+    width: 49%;
+    height: 50%;
+  }
+  .rightContainer {
+    height: 500px;
+    margin-top: 170px;
+    width: 100%;
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 1340px) {
+  main {
+    height: auto;
+  }
+  .leftContainer {
+    width: 100%;
+    height: 800px;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+  .leftIconWrapper {
+    width: 32.7%;
+    height: 70%;
+  }
+  .leftIconWrapper .smallIcon {
+    height: 43.3%;
+  }
+  .leftContainer .longIcon {
+    height: 56.6%;
+  }
+  .top-icon-wrapper {
+    width: 66.8%;
+    height: 70%;
+  }
+  .top-icon-wrapper .largeIcon {
+    width: 100%;
+    height: 56.6%;
+  }
+  .top-icon-wrapper .largeIcon p {
+    font-size: 1.4em;
+  }
+  .top-icon-wrapper .smallIcon {
+    width: 49%;
+    height: 21%;
+  }
+
+  .bottom-icon-wrapper {
+    margin-top: 2px;
+    width: 100%;
+    height: 30%;
+  }
+  .bottom-icon-wrapper .smallIcon {
+    width: 32.7%;
+    height: 50%;
+  }
+  .rightContainer {
+    height: 500px;
+    margin-top: 5px;
+    width: 100%;
+  }
+}
+@media screen and (min-width: 1340px) and (max-width: 1720px) {
+  .top-icon-wrapper .smallIcon {
+    width: 24.68%;
+  }
+}
